@@ -11,7 +11,7 @@ public class SpringbootdemoApplicationTests {
 
     @Test
     public void contextLoads() {
-
+        System.out.println("12344");
     }
     
 
