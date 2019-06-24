@@ -1,5 +1,7 @@
 package com.example.springbootdemo.src.main.test;
 
+import java.io.Serializable;
+
 /**
  * 类 名: User
  * 描 述: TDDD
@@ -7,32 +9,45 @@ package com.example.springbootdemo.src.main.test;
  * 创 建: 2019/6/19 16:31
  * 邮 箱: 472842181@qq.com
  */
-public class User {
-	public User(){}
-	private String id;
+public class User implements Serializable {
+
 	private String name;
-	private String password;
-	public String getId() {
-		return id;
-	}
-	public void setId(String id) {
-		this.id = id;
-	}
+	private int age;
+	private School school;
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getPassword() {
-		return password;
+
+	public int getAge() {
+		return age;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+
+	public void setAge(int age) {
+		this.age = age;
 	}
+
+	public School getSchool() {
+		return school;
+	}
+
+	public void setSchool(School school) {
+		this.school = school;
+	}
+
+
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", name=" + name + ", password=" + password
-				+ "]";
+		return "User{" +
+				"name='" + name + '\'' +
+				", age=" + age +
+				", school=" + school +
+				'}';
 	}
+
+
 }

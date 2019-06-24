@@ -21,9 +21,8 @@ public class SerializableTest {
 	 */
 	private static User initUser(){
 		User user = new User();
-		user.setId("1");
 		user.setName("jison");
-		user.setPassword("jison");
+		user.setAge(10);
 		return user;
 	}
 

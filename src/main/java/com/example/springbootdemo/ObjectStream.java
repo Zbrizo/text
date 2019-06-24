@@ -26,9 +26,13 @@ public class ObjectStream {
 		//ObjectInputStream objectInputStream=new ObjectInputStream();
 
 
-		FileOutputStream  file=new FileOutputStream("测试.txt");
+	/*	FileOutputStream  file=new FileOutputStream("测试.txt");
 
-		ObjectOutputStream objectOutputStream=new ObjectOutputStream(file);
+		ObjectOutputStream objectOutputStream=new ObjectOutputStream(file);*/
+		FileInputStream inputStream=new FileInputStream("测试测试.txt");
+		int a;
+
+
 	}
 
 

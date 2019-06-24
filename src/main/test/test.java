@@ -16,7 +16,7 @@ import java.lang.reflect.Field;
  * 邮 箱: 472842181@qq.com
  */
 public class test {
-	public static void main(String[] args) throws Exception{
+/*	public static void main(String[] args) throws Exception{
 		MyStack stack=new MyStack(1,2,3,4);
 		MyStack.setName("测试测试");
 		FileOutputStream fileOutputStream=new FileOutputStream("Serializable.txt");
@@ -25,14 +25,41 @@ public class test {
 		MyStack stack1=new MyStack();
 
 
-		/*FileInputStream fileInputStream=new FileInputStream("Serializable.txt");
+		*//*FileInputStream fileInputStream=new FileInputStream("Serializable.txt");
 		ObjectInputStream objectInputStream=new ObjectInputStream(fileInputStream);
 		MyStack stack=(MyStack) objectInputStream.readObject();
 		Field field=stack.getClass().getDeclaredField("name");
 		field.setAccessible(true);
 		String object=(String)field.get(stack);
-		System.out.println(object);*/
+		System.out.println(object);*//*
 
+	}*/
+	/*User user1=new User();
+		user1.setName("徐小明");
+		user1.setAge(20);
+		user1.setSchool(new School("蓝翔","中国山东"));
+		User user2=(User) user1.clone();
+		user2.getSchool().setName("新东方");
+		//未重写equals
+		System.out.println(user1.equals(user2));
+		System.out.println("user1："+user1);
+		System.out.println("user2："+user2);*/
+
+
+	public static void main(String[] args)throws Exception{
+		User user1=new User();
+		user1.setName("徐小明");
+		user1.setAge(20);
+		user1.setSchool(new School("蓝翔","中国山东"));
+		ObjectOutputStream objectOutputStream=new ObjectOutputStream(new FileOutputStream("text.txt"));
+		objectOutputStream.writeObject(user1);
+		objectOutputStream.close();
+		ObjectInputStream objectInputStream=new ObjectInputStream(new FileInputStream("text.txt"));
+		User user2=(User)objectInputStream.readObject();
+		System.out.println(user1.equals(user2));
+		System.out.println("user1："+user1);
+		System.out.println("user2："+user2);
 	}
+
 
 }

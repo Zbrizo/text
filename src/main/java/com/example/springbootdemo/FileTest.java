@@ -65,8 +65,7 @@ public class FileTest {
 		BufferedInputStream bufferedInputStream=new BufferedInputStream(fileInputStream);
 		ByteArrayOutputStream byteArrayOutputStream=new ByteArrayOutputStream();
 		byte[] a=new byte[5];
-		int b;
-		while((b=fileInputStream.read(a))!=-1){
+		while((fileInputStream.read(a))!=-1){
 			byteArrayOutputStream.write(a);
 		}
 		System.out.println(byteArrayOutputStream);
